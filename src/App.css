@@ -1,38 +1,735 @@
-.App {
-  text-align: center;
+/* @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap'); */
+
+
+html{
+  font-size:62.5%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*** Code for signup page ***/
+.mainSignUpDiv{
+  height:85vh;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:url("./images/universe.jpg");
+  background-size: cover;
+  position: relative;
+  font-family: 'Inconsolata', monospace;
+}
+.signupBody{
+  width:60%;
+  height:75vh;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, rgba(255,255,255,0.5),rgba(255,255,255,0.2));
+  box-shadow: 3px 4px 6px rgba(0,0,0,0.5);
+  border-radius: 2rem;
+  backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
+  position:relative;
+  z-index:2;
+}
+.signupForm{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:60%;
+  width:45%;
+  /* position:absolute; */
+  /* right:10rem; */
+  /* background-color: dodgerblue; */
+}
+.signupForm input{
+  height:10%;
+  outline-color: dodgerblue;
+  font-size: 1.7rem;
+  /* text-align: center; */
+}
+#signupbtn{
+  color:white;
+  background:dodgerblue;
+  border-radius: 0.5rem;
+  border:none;
+  /* width:50%; */
+  cursor:pointer;
+  transition: background 0.5s ;
+}
+#signupbtn:hover{
+  background-color:rgb(97, 176, 255);
+  border:0.3rem solid dodgerblue;
+}
+.signupBody img{
+  height:34rem;
+  width:35rem;
+}
+/* .circleOneSignUpPage{
+  height:15rem;
+  width:15rem;
+  border-radius: 50%;
+  position:absolute;
+  top:0.5rem;
+  left:20rem;
+  z-index: 1;
+  background:#cc2115;
+}
+.circleTwoSignUpPage{
+  height:15rem;
+  width:15rem;
+  border-radius: 50%;
+  position:absolute;
+  bottom:0.5rem;
+  right:20rem;
+  z-index: 1;
+  background:#6218c4;
+} */
+.clickHereSignup{
+  position:absolute;
+  bottom:2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color:rgb(184, 42, 23);
+}
+/*** Code for login page ***/
+.mainLoginBody{
+  height:85vh;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  background:url(./images/loginPageBackgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  font-family: 'Inconsolata', monospace;
+}
+.loginBody{
+  width:60%;
+  height:75vh;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right,rgba(255,255,255,0.3),rgba(255,255,255,0.2));
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.3rem);
+  box-shadow: 3px 4px 6px rgba(0,0,0,0.5);
+  border-radius: 2rem;
+  z-index: 2;
+}
+.loginBody img{
+  height:30rem;
+  width:32rem;
+}
+.loginForm{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height:40%;
+  width:40%;
+  /* background-color: dodgerblue; */
+}
+.loginForm input{
+  height:20%;
+  outline-color: greenyellow;
+  font-size: 1.7rem;
+}
+#loginbtn{
+  color:white;
+  background:dodgerblue;
+  border:none;
+  border-radius: 0.3rem;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+#loginbtn:hover{
+  background:rgba(85, 201, 255, 0.897);
+}
+.loginBody img{
+  height:25rem;
+  width:25rem;
+}
+/* .circleOneLoginPage{
+  height:15rem;
+  width:15rem;
+  border-radius: 50%;
+  position:absolute;
+  top:0.5rem;
+  right:20rem;
+  z-index: 1;
+  background:#17BEBB;
+}
+.circleTwoLoginPage{
+  height:15rem;
+  width:15rem;
+  border-radius: 50%;
+  position:absolute;
+  bottom:0.5rem;
+  left:20rem;
+  z-index: 1;
+  background:#E4572E;
+} */
+
+.clickHereLogin{
+  position:absolute;
+  bottom:2rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color:#583d72;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*** Code for Navbar ***/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbarBody{
+  height:15vh;
+  width:100%;
+  font-family: 'Inconsolata', monospace;
+}
+.navbar{
+  width:100%;
+  height:15vh;
+  position:relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#CDD6E0;
+}
+.logo{
+  /* background: chartreuse; */
+  position:relative;
+  left:4rem;
+  width:20%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.logo svg{
+  animation:spining 2s infinite;
+}
+@keyframes spining{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(180deg);}
+  75%{transform: rotateY(270deg);}
+  100%{transform: rotateY(-360deg);}
+}
+#menu{
+  display:none;
+}
+
+.links{
+  width:50%;
+}
+.links ul{
+  /* background: crimson; */
+  display:flex;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.links ul li a{
+  text-decoration: none;
+  color:white;
+}
+.links ul li{
+  list-style: none;
+  border: 0.2rem solid dodgerblue;
+  padding:0.2rem 0.8rem;
+  border-radius: 1rem;
+  background:#2978b5;
+  transform:scale(1);
+  transition: all 0.3s;
+}
+.links ul li:hover{
+  background:#51c4d3;
+  border: 0.2rem solid rgb(173, 214, 255);
+  transform: scale(1.2);
+}
+.logo h2{
+  font-size: 2rem;
+  position:relative;
+  left:3rem;
+}
+
+/*** Code for Home ***/
+
+.homeMainBody{
+  height:85vh;
+  width:100%;
+  position:relative;
+  font-family: 'Inconsolata', monospace;
+}
+.homeBody{
+  width:100%;
+  height:85vh;
+  display:flex;
+}
+.homeDivLeft{
+  height:85vh;
+  width:50%;
+  background-color:#A9CBEF;
+}
+.homeDivRight{
+  height:85vh;
+  width:50%;
+  background-color:#AFB3F7;
+}
+.homeBodyInfo{
+  position:absolute;
+  top:10%;
+  left:19%;
+  text-align: center;
+  font-size: 2rem;
+}
+.homeBodyInfo2{
+  position:absolute;
+  /* top:10%;
+  left:19%;
+  text-align: center;
+  font-size: 2rem; */
+  width:100%;
+  height:80vh;
+  display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
+}
+#homeRegisterBtn{
+  background:rgb(4, 201, 47);
+  padding:1rem 0.8rem;
+  color:white;
+  border:none;
+  border-radius: 1rem;
+  cursor:pointer;
+  box-shadow: 0 0 0 rgba(255,255,255,1);
+  transform: scale(1);
+  transition: all 0.3s;
+  font-size: 1.7rem;
+}
+#homeRegisterBtn:hover{
+  box-shadow: 0.4rem 0.2rem 0.5rem rgba(255,255,255,1);
+  transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
+/*** Code for contact ***/
+.mainContactPageBody{
+  height:85vh;
+  width:100%;
+  background: #d8e3e7;
+}
+.contactPageBodeOne{
+  height:25vh;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contactPageInputField{
+  width:20%;
+  height:12vh;
+  background: rgba(255,255,255,0.7);
+  border-radius: 2rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.4rem 0.3rem 0.5rem #2f5d62;
+}
+.contactPageInputField input{
+  height:9vh;
+  width:90%;
+  border-radius: 1.5rem;
+  border:none;
+  outline-color: #db680a;
+  font-size: 1.7rem;
+  font-weight: 600;
+  /* box-shadow: 0.2rem 0.3rem 0.4rem rgba(0,0,0,0.3); */
+  text-align: center;
+}
+.contactPageBodeTwo{
+  height:60vh;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactPageDescField{
+  height:50vh;
+  width:60%;
+  background: rgba(255,255,255,0.7);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2rem;
+  border:none;
+  box-shadow: 0.5rem 0.4rem 0.6rem #2f5d62;
+  position:relative;
+}
+.contactPageDescField input{
+  height:8vh;
+  width:65%;
+  border-radius: 1.5rem;
+  border:none;
+  outline-color: #2b2e4a;
+  font-size: 1.7rem;
+  font-weight: 600;
+  /* box-shadow: 0.2rem 0.3rem 0.4rem rgba(0,0,0,0.3); */
+  text-align: center;
+}
+.contactPageDescField textarea{
+  height:30vh;
+  width:65%;
+  border-radius: 1.5rem;
+  border:none;
+  outline-color: #2b2e4a;
+  font-size: 2rem;
+  box-shadow: 0.2rem 0.3rem 0.4rem rgba(0,0,0,0.3);
+  resize: none;
+  text-align: center;
+}
+.contactPageDescField button{
+  position:absolute;
+  /* width:3rem; */
+  background: #72147e;
+  right:1rem;
+  /* top:0; */
+  padding:0.8rem;
+  border:0.2rem solid #72147e;
+  border-radius: 0.4rem;
+  color:white;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+.contactPageDescField button:hover{
+  background: #f21170;
+  border:0.2rem solid #f21170;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/***  Code for About Page ***/
+
+.mainAboutPageBody{
+  height:85vh;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  background:#DEDBD2;
+}
+.mainAboutPage{
+  height:70vh;
+  width:60%;
+  background:linear-gradient(to right,rgba(168,204,201,0.7),rgba(179,214,198,0.2));
+  border-radius: 1rem;
+  box-shadow: 0.4rem 0.5rem 1rem rgba(82, 111, 124, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutPageDivOne{
+  /* background: dodgerblue; */
+  width:35%;
+  height:100%
+}
+.aboutPageProfilePic{
+  height:50%;
+  width:100%;
+  /* background-color:firebrick; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutPageProfilePic img{
+  width:50%;
+  height:80%
+}
+.aboutPageDivTwo{
+  /* background: firebrick; */
+  width:65%;
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size:2rem;
+}
+.displayDataFields{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:relative;
+}
+.displayDataFields label{
+  border:0.15rem solid white;
+  color:dodgerblue;
+  padding:0.2rem;
+  background:rgba(255,255,255,0.7);
+  font-weight: 800;
+  border-radius:0.25rem;
+  /* width:100%; */
+  position:relative;
+  /* left:1rem; */
+}
+.dataField{
+  width:50%;
+  /* border:0.15rem solid white; */
+  color:#5F00BA;
+  font-size: 2.1rem;
+  font-weight: 600;
+  padding:0.2rem;
+  /* background:rgba(255,255,255,0.7); */
+  position:absolute;
+  left:14rem;
+  text-align: left;
+}
+
+/**** Code for Logout Page ****/
+
+.logoutPageBody{
+  width:100%;
+  height:80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #feffde;
+}
+.loader{
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #0061a8;
+  border-right: 16px solid #2978b5;
+  border-bottom: 16px solid #8ab6d6;
+  border-left: 16px solid #fbe0c4;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/**** Code for Mobile devices ****/
+@media only screen and (max-width:700px){
+  .navbarBody{
+    width:100%;
+    height:15vh;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar{
+    width:100%;
   }
+  .logo{
+    display:flex;
+    width:50%;
+    align-items: center;
+    justify-content: center;
+  }
+  #menu{
+    display:block;
+    width:3.5rem;
+    position:relative;
+    right:3.5rem;
+  }
+  .links{
+    /* display:none; */
+    position:absolute;
+    top:7rem;
+    z-index: 2;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .links ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: cornsilk;
+  }
+  .links ul li{
+    list-style: none;
+    border:none;
+    background: none;
+    text-align: center;
+  }
+  .links ul li:hover{
+    border:none;
+    background:none;
+  }
+  .links ul li a{
+    color:black;
+    font-size: 1.8rem;
+  }
+
+
+/*** Code for Home Page ***/ 
+
+.homeMainBody{
+  height:85vh;
+}
+.homeBody{
+  height:85vh;
+}
+.homeDivLeft{
+  height:85vh;
+}
+.homeDivRight{
+  height:85vh;
+}
+.homeBodyInfo{
+  position:absolute;
+  top:10%;
+  left:2%;
+  text-align: center;
+  font-size: 1.55rem;
+}
+.homeBodyInfo2{
+  font-size:1.7rem;
+}
+#homeRegisterBtn{
+  position:relative;
+  top:1rem;
+  font-size: 1.4rem;
+}
+
+/*** Code For Login Page ***/ 
+
+.loginBody img{
+  display:none;
+}
+.loginBody{
+  width:75%;
+  height:65vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right,rgba(255,255,255,0.3),rgba(255,255,255,0.2));
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.3rem);
+  box-shadow: 3px 4px 6px rgba(0,0,0,0.5);
+  border-radius: 2rem;
+  z-index: 2;
+}
+.loginForm{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height:40%;
+  width:100%;
+  /* background-color: dodgerblue; */
+}
+.loginForm input{
+  height:20%;
+  width:77%;
+  outline-color: greenyellow;
+  font-size: 1.7rem;
+}
+/*** Code for SignUp Page ***/
+.signupBody{
+  width:78%;
+}
+.signupBody img{
+  display:none;
+}
+.signupForm{
+  width:100%;
+  align-items: center;
+}
+.signupForm input{
+  width:75%;
+}
+.clickHereSignup{
+  position:absolute;
+  text-align: center;
+  bottom:2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color:rgb(123, 36, 204);
+}
+
+/*** Code for Contact Page ***/
+
+.contactPageBodeOne{
+  height:30vh;
+  width:100%;
+  position:relative;
+  top:1.5rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contactPageInputField{
+  width:65%;
+  height:8vh;
+  
+}
+.contactPageInputField input{
+  height:7vh;
+  width:90%;
+}
+.contactPageBodeTwo{
+  height:55vh;
+}
+.contactPageDescField{
+  height:45vh;
+  width:78%;
+  justify-content: space-evenly;
+  position:relative;
+}
+.contactPageDescField input{
+  width:80%;
+  height:7vh;
+  position:absolute;
+  top:1rem;
+}
+.contactPageDescField textarea{
+  height:22vh;
+  width:80%;
+}
+.contactPageDescField button{
+  bottom:1.5rem;
+  left:10rem;
+}
+/*** Code for About Page ***/
+
+.mainAboutPage{
+  height:70vh;
+  width:80%;
+  flex-direction: column;
+}
+.aboutPageDivOne{
+  height:35%;
+}
+.aboutPageProfilePic{
+  /* display:none; */
+  height:100%;
+  width:100%;
+}
+.aboutPageProfilePic img{
+  height:100%;
+  width:100%;
+}
+.aboutPageDivTwo{
+  width:100%;
+}
+.displayDataFields{
+  flex-direction: column;
+  height:5rem;
+  justify-content: space-evenly;
+}
+.displayDataFields label{
+  padding:0.1rem;
+  font-size: 1.7rem;
+}
+.dataField{
+  position:relative;
+  left:0rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
 }
